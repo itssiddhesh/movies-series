@@ -198,7 +198,7 @@ export default function ContentModal({ mediaType, id, rating, children }) {
                     target="__blank"
                     href={`https://1337x.to/search/${url}/1/`}
                   >
-                    Download
+                   Torrent Download(Use VPN)
                   </Button>
                 </div>
               </div>
