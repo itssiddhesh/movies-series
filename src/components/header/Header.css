@@ -1,0 +1,25 @@
+.header{
+    width: 100%;
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: rgb(51, 51, 51);
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 4vw;
+    padding-bottom: 2px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    box-shadow: 1px 2px 5px black;
+    color: rgb(253, 123, 36);
+    z-index: 100;
+}
+
+@media screen and (max-width: 700ps){
+    .header{
+        padding-bottom: 0;
+    }
+}

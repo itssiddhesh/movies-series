@@ -1,0 +1,8 @@
+.typeof{
+    color: black;
+    font-weight: bolder;
+    font-family:'Times New Roman', Times, serif;
+    font-style:oblique;
+    display: flex;
+    justify-content: center;
+}

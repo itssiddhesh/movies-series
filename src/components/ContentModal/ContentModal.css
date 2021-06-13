@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+.content-landscape{
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.content-portrait{
+    display: none;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.tagline{
+    padding-bottom: 10px;
+    align-self: center;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 50;
+    color: aqua;
+}
+
+.contentmodal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.contentmodal::-webkit-scrollbar{
+    display: none;
+}
+
+.content-about{
+    padding: 10px;
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: 300;
+}
+
+.content-title{
+    height: 12%;
+    font-size: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39, 39, 39);
+    padding-top: 20px;
+    border-radius: 10px;
+    color: aqua;
+    box-shadow: 2px 3px 5px;
+    position: relative;
+}
+
+.content-des{
+    display: flex;
+    height: 40%;
+    overflow-y: scroll;
+    padding: 15px;
+    border-radius: 20px;
+    scrollbar-width: thin;
+    box-shadow: inset 0 0 5px black;
+    text-align: justify;
+    background-color: rgb(39, 39, 39);
+    color: aqua;
+}
+
+.content-des::-webkit-scrollbar{
+    display: none;
+}
+
+@media (min-width: 835px){
+    .content-landscape{
+        display: none;
+    }
+    .content-portrait{
+        display: flex;
+        width: 38%;
+    }
+    .contentmodal{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+    .content-about{
+        width: 58%;
+        padding: 0;
+        height: 100%;
+    }
+    .content-title{
+        font-size: 3.5vw;
+    }
+    .content-des{
+        font-size: 22px;
+    }
+}
+
+.rating{
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(39, 39, 39);
+    width: 10%;
+    border-radius: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+.genres{
+    display: flex;
+    justify-content: center;
+}
