@@ -14,16 +14,15 @@
     padding-bottom: 10px;
     align-self: center;
     font-family: 'Do Hyeon', sans-serif;
-    font-size: 50;
-    color: aqua;
+    color: white;
 }
 
 .contentmodal{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
-    width: 100%;
+    width: auto;
     overflow-y: scroll;
     scrollbar-width: none;
     font-family: 'Do Hyeon', sans-serif;
@@ -34,40 +33,38 @@
 }
 
 .content-about{
-    padding: 10px;
-    width: 95%;
-    height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    font-weight: 300;
+    justify-content: space-around;
+    background-color: rgb(39, 39, 39);
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px black;
 }
 
 .content-title{
-    height: 12%;
-    font-size: 5vw;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: rgb(39, 39, 39);
-    padding-top: 20px;
-    border-radius: 10px;
-    color: aqua;
-    box-shadow: 2px 3px 5px;
-    position: relative;
+    background-color: #dddde0;
+    margin-left: 17px;
+    margin-right: 17px;
+    border-radius: 5px;
+    color: rgb(39, 39, 39);
+    padding: 5px;
 }
 
 .content-des{
     display: flex;
-    height: 40%;
+    height: auto;
     overflow-y: scroll;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 5px;
+    margin-left: 17px;
+    margin-right: 17px;
     scrollbar-width: thin;
     box-shadow: inset 0 0 5px black;
     text-align: justify;
-    background-color: rgb(39, 39, 39);
-    color: aqua;
+    background-color: #dddde0;
+    color: rgb(39, 39, 39);
 }
 
 .content-des::-webkit-scrollbar{
@@ -115,4 +112,8 @@
 .genres{
     display: flex;
     justify-content: center;
+}
+
+.modal-btn:hover{
+    box-shadow: 2px 5px 10px black;
 }

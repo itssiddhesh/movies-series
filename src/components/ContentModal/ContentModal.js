@@ -19,14 +19,14 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     width: "90%",
-    height: "80%",
+    height: "90%",
     backgroundColor: "#39445a",
     border: "1px solid #282c34",
-    borderRadius: 10,
+    borderRadius: '5px',
     color: "white",
-    backgroundColor: "rgb(74, 107, 104)",
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
+    backgroundColor: "rgb(96, 104, 103)",
+    border: "0",
+    boxShadow: theme.shadows[7],
     padding: theme.spacing(1, 1, 3),
   },
 }));
@@ -101,6 +101,7 @@ export default function ContentModal({ mediaType, id, rating, children }) {
               <div className="contentmodal">
                 <img
                   className="content-portrait"
+                  style={{borderRadius: '5px'}}
                   alt={content.name || content.title}
                   src={
                     content.poster_path
@@ -110,6 +111,7 @@ export default function ContentModal({ mediaType, id, rating, children }) {
                 />
                 <img
                   className="content-landscape"
+                  style={{borderRadius: '5px'}}
                   alt={content.name || content.title}
                   src={
                     content.poster_path
@@ -120,7 +122,6 @@ export default function ContentModal({ mediaType, id, rating, children }) {
                 <div className="content-about">
                   <span
                     className="content-title"
-                    style={{ objectFit: "contain" }}
                   >
                     {content.name || content.title}
                     <span>&nbsp;</span>(
@@ -137,12 +138,13 @@ export default function ContentModal({ mediaType, id, rating, children }) {
                         <Badge
                           style={{
                             padding: "6px",
-                            backgroundColor: "rgb(39, 39, 39)",
+                            backgroundColor: "#dddde0",
                             marginTop: "8px",
                             marginRight: "2px",
                             marginLeft: "2px",
                             borderRadius: "10px",
-                            color: "aqua",
+                            color: "rgb(39, 39, 39)",
+                            boxShadow: '2px 5px 10px black'
                           }}
                         >
                           {g.name}
@@ -151,7 +153,7 @@ export default function ContentModal({ mediaType, id, rating, children }) {
                     </div>
                   )}
                   {content.tagline && (
-                    <i className="tagline">{content.tagline}</i>
+                    <i className="tagline" style={{backgroundColor: '#dddde0', color: 'rgb(39, 39, 39)',display: 'flex',justifyContent: 'center',borderRadius: '10px',textAlign: 'center',alignItems: 'center',boxShadow: '2px 5px 10px black',padding: '3px'}}>{content.tagline}</i>
                   )}
                   {
                     <Badge
@@ -181,25 +183,31 @@ export default function ContentModal({ mediaType, id, rating, children }) {
                     </Badge>
                   }
                   <span className="content-des">{content.overview}</span>
-                  <div></div>
+                  <div style={{display: 'flex', justifyContent: 'space-around'}}>
                   <Button
+                  className='modal-btn'
                     variant="contained"
                     startIcon={<FaYoutube />}
                     color="secondary"
                     target="__blank"
                     href={`https://www.youtube.com/watch?v=${video}`}
+                    style={{width: '45%'}}
                   >
                     Watch the Trailer
                   </Button>
                   <Button
+                  className='modal-btn'
                     variant="contained"
                     startIcon={<BsDownload />}
                     color="primary"
                     target="__blank"
                     href={`https://1337x.to/search/${url}/1/`}
+                    style={{width: '45%'}}
                   >
                    Torrent Download(Use VPN)
                   </Button>
+                  </div>
+                  
                 </div>
               </div>
             </div>

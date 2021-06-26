@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
         <Link to='/'>
-        <h2 className='header' > <FcFilmReel/> What to Watch <FcClapperboard/>  </h2>
+        <h2 className='header' ><FcFilmReel/>{"   "} What to Watch {"   "}<FcClapperboard/>  </h2>
         </Link>
         
     )

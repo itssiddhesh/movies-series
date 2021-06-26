@@ -2,20 +2,23 @@
     color: rgb(253, 253, 253);
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 220px;
+    height: 437px;
     padding: 5px;
-    margin: 5px 0;
+    margin: 5px;
     background-color: rgb(39, 39, 39);
-    border-radius: 10px;
+    border: 0;
+    border-radius: 5px;
     position: relative;
     font-family: 'Do Hyeon', sans-serif;
     cursor: pointer;
-    box-shadow: 2px 3px 5px aqua;
+    transition: 0.4s;
 }
 
 .media:hover{
-    background-color: rgb(255, 255, 255);
+    background-color: #dddde0;
     color: rgb(50, 51, 50);
+    box-shadow: 6px 12px 13px rgb(44, 44, 44);
 }
 
 @media(max-width:550px){
@@ -25,8 +28,8 @@
 }
 
 .poster{
-    border: 3px solid rgb(28, 167, 192);
-    border-radius: 10px;
+    border: 0;
+    border-radius: 5px;
 }
 
 .title{

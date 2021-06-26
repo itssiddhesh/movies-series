@@ -3,8 +3,8 @@ import { BsFilm } from "react-icons/bs";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import CustomPagination from "../../components/pagination/CustomPagination";
 import TypeOf from "../../components/typeof/TypeOf";
-import './Movie.css'
-import useType from '../../hooks/useType'
+import "./Movie.css";
+import useType from "../../hooks/useType";
 
 function Movies() {
   const [page, setPage] = useState(1);
@@ -12,7 +12,7 @@ function Movies() {
   const [numOfPages, setnumOfPages] = useState();
   const [selectType, setSelectType] = useState([]);
   const [type, setType] = useState([]);
-  const typeURL=useType(selectType);
+  const typeURL = useType(selectType);
 
   useEffect(() => {
     fetch(
@@ -26,17 +26,24 @@ function Movies() {
         setValue(data.results);
         setnumOfPages(data.total_pages);
       });
-  }, [page,selectType]);
-
-  
+  }, [page, selectType]);
 
   return (
     <div>
-      <span className="pagetitle" onClick={()=>{window.scroll(0,0)}}>
-        {" "}
-        <BsFilm /> Movies{" "}
-      </span>
-      <div style={{paddingTop: '70px',display: 'flex',justifyContent: 'center'}}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <span className="pagetitle">
+          {" "}
+          <BsFilm /> Movies{" "}
+        </span>
+      </div>
+
+      <div
+        style={{
+          paddingTop: "20px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TypeOf
           name="movie"
           selectType={selectType}
@@ -55,7 +62,7 @@ function Movies() {
               poster={t.poster_path}
               title={t.title || t.name}
               date={t.first_air_date || t.release_date}
-              mediaType='movie'
+              mediaType="movie"
               rating={t.vote_average}
             />
           ))}

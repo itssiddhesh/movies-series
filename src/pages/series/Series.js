@@ -1,19 +1,18 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from "react";
 import { BsFillCollectionPlayFill } from "react-icons/bs";
 import SingleContent from "../../components/SingleContent/SingleContent";
 import CustomPagination from "../../components/pagination/CustomPagination";
 import TypeOf from "../../components/typeof/TypeOf";
-import '../movies/Movie.css'
-import useType from '../../hooks/useType'
+import "../movies/Movie.css";
+import useType from "../../hooks/useType";
 
 function Series() {
-
-    const [page, setPage] = useState(1);
+  const [page, setPage] = useState(1);
   const [value, setValue] = useState([]);
   const [numOfPages, setnumOfPages] = useState();
   const [selectType, setSelectType] = useState([]);
   const [type, setType] = useState([]);
-  const typeURL=useType(selectType);
+  const typeURL = useType(selectType);
 
   useEffect(() => {
     fetch(
@@ -27,12 +26,21 @@ function Series() {
         setValue(data.results);
         setnumOfPages(data.total_pages);
       });
-  }, [page,selectType]);
+  }, [page, selectType]);
 
-    return (
-        <div>
-            <span className='pagetitle' onClick={()=>{window.scroll(0,0)}} ><BsFillCollectionPlayFill/>Series</span>
-            <div style={{paddingTop: '70px',display: 'flex',justifyContent: 'center'}}>
+  return (
+    <div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <span className="pagetitle"><BsFillCollectionPlayFill /> Series</span>
+      </div>
+
+      <div
+        style={{
+          paddingTop: "20px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <TypeOf
           name="tv"
           selectType={selectType}
@@ -51,7 +59,7 @@ function Series() {
               poster={t.poster_path}
               title={t.title || t.name}
               date={t.first_air_date || t.release_date}
-              mediaType='tv'
+              mediaType="tv"
               rating={t.vote_average}
             />
           ))}
@@ -61,8 +69,8 @@ function Series() {
           <CustomPagination setpage={setPage} numOfPages={numOfPages} />
         )}
       </div>
-        </div>
-    )
+    </div>
+  );
 }
 
-export default Series
+export default Series;

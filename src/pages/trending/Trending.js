@@ -24,7 +24,9 @@ function Trending() {
 
   return (
     <div>
-      <span className="pagetitle" onClick={()=>{window.scroll(0,0)}}><AiFillFire/>Trending</span>
+      <div style={{display: 'flex', justifyContent: "center"}}>
+      <span className="pagetitle"><AiFillFire/>Trending</span>
+      </div>      
       <div className="trending">
         {value &&
           value.map((t) => (

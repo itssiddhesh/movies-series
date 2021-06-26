@@ -16,7 +16,7 @@ function SingleContent({id, poster, title, date, mediaType, rating}) {
                 color: 'greenyellow',
                 fontFamily: "serif",
                 fontWeight: "bold",
-                backgroundColor: "black",
+                backgroundColor: "rgb(39, 39, 39)",
                 display: "flex",
                 justifyContent: "center",
                 width: "15%",
@@ -27,11 +27,12 @@ function SingleContent({id, poster, title, date, mediaType, rating}) {
                 color: 'red',
                 fontFamily: "serif",
                 fontWeight: "bold",
-                backgroundColor: "black",
+                backgroundColor: "rgb(39, 39, 39)",
                 display: "flex",
                 justifyContent: "center",
                 width: "15%",
                 borderRadius: "10px",
+                margin: '2px'
               }
         }
         variant="danger"
